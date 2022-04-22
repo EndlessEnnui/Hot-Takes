@@ -8,7 +8,7 @@ constructor (xpos, ypos, speed, size, type) {
   this.size = size;
   this.type = type;
 }
-}
+
 
 display() {
   jp = createSprite(this.xpos, this,ypos, this,speed, this.size)
@@ -50,4 +50,5 @@ bound(){
     if(this.xpos > SCENE_H);
       this.ypos = SCENE_H;
     }
+}
 }
