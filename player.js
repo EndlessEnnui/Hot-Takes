@@ -11,9 +11,9 @@ constructor (xpos, ypos, speed, size, type) {
 
 
 display() {
-  jp = createSprite(this.xpos, this,ypos, this,speed, this.size)
+  jp = createSprite(this.xpos, this.ypos, this.speed, this.size)
 
-  var myAnimation - jp.Animation('floating', 'assets/pot2.png', 'assets/pot1.png');
+  var myAnimation = jp.addAnimation('floating', 'assets/pot2.png', 'assets/pot1.png');
 
     jp.addAnimation('moving', 'assets/pot.png', 'assets/pot2.png');
 

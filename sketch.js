@@ -12,16 +12,19 @@ var SCENE_H = 8000;
 var jp;
 var bg;
 var frame;
-var player;
+
 function setup() {
   var canvas = createCanvas(800, 800);
 
   bg = new Group();
   playerjp = new player(400, 400, 3, 20, 'jp');
 
-  for(var i=0; i<80; i++){
+  for(var i=0; i<80; i++)
+  {
+    //create a sprite and add the 3 animations
     var rock = createSprite(random(-width, SCENE_W+width), random(-height, SCENE_H+height));
-    peppers.addAnimation('normal', 'assets/peppers'+i%3+'.png');
+    //cycles through rocks 0 1 2
+    rock.addAnimation('normal', 'assets/peppers'+i%3+'.png');
     bg.add(rock);
   }
 }
